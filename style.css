@@ -1,0 +1,324 @@
+@import url('https://fonts.googleapis.com/css2?family=Cantora+One&display=swap');
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+}
+
+:root {
+  --dark-pink: #f2168f;
+  --light-pink: #f288c2;
+  --blue: #3841f2;
+  --ghost: #f2f2f2;
+  --black: #0d0d0d;
+  --concert-font:  "Concert One", sans-serif;
+ 
+}
+
+html,
+body {
+  min-height: 100vh; /* Makes sure the page is at least the height of the viewport */
+  padding-bottom: 3em; /* Adds extra space at the bottom */
+  box-sizing: border-box; 
+}
+
+.brand-name{
+  position: absolute;
+  top: 2em;
+  left: 12em;
+  
+}
+
+.brand-name:hover{
+  transform: scale(0.95);
+}
+
+.brand-name h1{
+  font-family: "Cantora One", sans-serif;
+  font-weight: bolder;
+  font-style: normal;
+
+}
+
+.brand-name span{
+  position: absolute;
+  right: 0.7em;
+  font-family: "Cantora One", sans-serif;
+  font-weight: bolder;
+  font-style: normal;
+  color:var(--dark-pink);
+  line-height: 0.5em;
+}
+
+
+
+
+.content {
+  position: relative;
+  left: 32%;
+  top: 3em;
+  width:100%;
+  width: max-content;
+  display: flex;
+  flex-direction: column; 
+  gap: 4em;
+  border: 2px solid #ddd;
+  box-shadow:  0 4px 8px rgba(0,0,0,0.4);
+  padding: 4em 5em;
+  border-radius: 1.5em;
+}
+
+
+.content img{
+ display: inline-block;
+ background:  rgba(144, 238, 144,0.2);
+ padding: 20px;
+ position: absolute;
+ top: 3em;
+ margin-left: 9em;
+ width: 5em;
+ height: 5em;
+ border-radius: 150%;
+ 
+}
+
+
+.payment {
+  position: absolute;
+  bottom: 32em;
+  left: 12em;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  gap: 0.5em;
+  
+
+  h1 {
+    font-size: 1.2em;
+    color: rgba(0, 0, 0, 0.6);
+  }
+
+  h2 {
+    font-size: 1.5em;
+    font-weight: 700;
+  }
+
+  h2 span{
+    text-decoration: line-through;
+  }
+}
+
+table td {
+  padding: 0.6em;
+}
+
+table {
+  width: 100%;
+  margin-top: 11em;
+  border-collapse: collapse;
+
+  tr td:first-child {
+    color: gray;
+  }
+
+  tr td:last-child {
+    text-align: right;
+  }
+}
+
+table tr.row-1 td{
+  padding-top:2em ;
+  border-top: 0.1em groove rgba(128, 128, 128, 0.11);
+}
+
+table tr.row-4 td{
+  padding-bottom:1.5em ;
+}
+
+
+table tr.row-5 td{
+  border-top: 0.1em dotted gray;
+  padding-top: 2em;
+  
+}
+
+.content button {
+  outline: none;
+  border: none;
+  border-radius: 0.65em;
+  background: var(--dark-pink);
+  color: var(--ghost);
+  font-size: 1.5em;
+  font-weight: 600;
+  padding: 0.5em 0.5em;
+  transition: 3ms ease-in-out;
+}
+
+button:hover{
+  transform: scale(0.95);
+  
+
+}
+
+@media (max-width:576px){
+  body{
+    height: 100%; /* Ensure the body and html take up the full height */
+    margin: 0;    /* Remove any default browser margins */
+    padding: 0;   /* Remove default padding */
+    box-sizing: border-box;
+  }
+ 
+
+  .content{
+    position:relative;
+    top: 8em;
+    left: 3.5em;
+    width:80%;
+    height: 100vh;
+    padding: 5em 8em;
+    margin: 2em 0 7em 0;
+    
+
+  }
+
+  table{
+    width: 100%;
+    position: relative;
+    top: 1em;
+
+  }
+
+  
+
+  table tr td{
+    position: relative;
+    right: 8em;
+    font-size: 0.8em;
+    white-space: nowrap;
+    font-weight: bolder;
+    
+  }
+
+  
+  table tr.row-1 td::before{
+    content: "";
+    position: absolute;
+    top: 0;            /* Adjust the position of the border */
+    left: 0; 
+    width: 100%;
+    height: 2px;       /*Border thickness*/
+    border-top: 0.1em groove rgba(128, 128, 128, 0.295);  /* Border color */
+  }
+
+  table tr.row-1 td{
+    border: none;
+  }
+
+  table tr.row-5 td::before{
+    content: "";
+    position: absolute;
+    top: 0;            /* Adjust the position of the border */
+    left: 0; 
+    width: 100%;
+    height: 2px;       /*Border thickness*/
+    border-top: 0.1em dotted gray;  /* Border color */
+  }
+
+  table tr.row-5 td{
+    border: none;
+  }
+ 
+
+  .payment{
+    position: absolute;
+    top:11em;
+    left: 7em;
+  }
+
+  .content img{
+    position: absolute;
+    left: 0.4em;
+    top: 4.5em;
+
+  }
+
+  .content button{
+    display: flex;
+    position: relative;
+    top: 1em;
+    right: 3.5em;
+    font-size:1em;
+    padding: 1em 7em;
+    align-items: center;
+    justify-content: center;
+
+  }
+
+  
+
+}
+
+@media (min-width: 769px) and (max-width: 1024px) {
+
+  .brand-name{
+    position:absolute;
+    left: 22em;
+  }
+  .content{
+    width: 65%;
+    position: relative;
+    left: 9em;
+    top: 10em;
+    margin-bottom: 5em;
+  }
+
+  .content img{
+    position: absolute;
+    left: 3.5em;
+  }
+
+  table tr td{
+    position: relative;
+    right: 2em;
+    font-size: 1em;
+    white-space: nowrap;
+  }
+  .payment{
+    position: absolute;
+    top: 9em;
+    left:10em;
+  }
+
+  table tr.row-1 td::before{
+    content: "";
+    position: absolute;
+    top: 0;            /* Adjust the position of the border */
+    left: 0; 
+    width: 100%;
+    height: 2px;       /*Border thickness*/
+    border-top: 0.1em groove rgba(128, 128, 128, 0.128);  /* Border color */ 
+  } 
+
+  .content table tr.row-1 td{
+    border: none;
+  }
+ 
+
+  table tr.row-5 td::before{
+    content: "";
+    position: absolute;
+    top: 0;            /* Adjust the position of the border */
+    left: 0; 
+    width: 100%;
+    height: 2px;       /*Border thickness*/
+    border-top: 0.1em dotted gray;  /* Border color */ 
+  } 
+
+  .content table tr.row-5 td{
+    border: none;
+  }
+}
+
+
